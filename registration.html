@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9</title>
+    <script>
+        function validate(){
+            var name=document.form.name;
+            var email=document.form.email;
+            var mobile=document.form.mobile;
+            var gender=document.form.gender;
+            var course=document.form.course;
+            var batch=document.form.batch;
+            
+
+            if(name.value.length<=0){
+                alert("Name is required");
+                name.focus();
+                return false;            
+            }
+            if(email.value.length<=0){
+                alert("Email is required");
+                email.focus();
+                return false;            
+            }
+            if(mobile.value.length<10){
+                alert("Mobile is required");
+                mobile.focus();
+                return false;            
+            }
+            
+            if(name.value.length>=0 && email.value.length>=0 && mobile.value.length==10){
+                alert("Registration Successful")
+
+            }
+            else{
+                alert("Check your details once again");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <form method="" action="" name="form" onsubmit="validate()">
+    <h1>Student Registration Form</h1>
+    <hr>
+    <table>
+        <tr>
+            <td><label>Name :</label></td><td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td><label>Email :</label></td><td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td><label>Mobile :</label></td><td><input type="text" name="mobile"></td>
+        </tr>
+        <tr>
+            <td><label>Gender :</label></td>
+            <td><input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+                <input type="radio" name="gender" value="Other">Other
+            </td>
+        </tr>
+        <tr>
+            <td><label>Course :</label></td>
+            <td><select name="course" placeholder="select course">
+                <option value="Frontend Developement">Frontend Developement</option>
+                <option value="Backend Developement">Backend Developement</option>
+                <option value="Full Stack Web Developement">Full Stack Web Developement</option>
+
+            </select></td>
+        </tr>
+        <tr>
+            <td><label>Batch :</label></td>
+            <td><input type="checkbox" name="batch" value="Morning">Morning
+                <input type="checkbox" name="batch" value="Afternoon">Afternoon
+                <input type="checkbox" name="batch" value="Evening">Evening
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit" value="submit">
+                <input type="reset" name="reset" value="reset"></td>
+        </tr>
+        
+
+    </table>
+</form>
+    
+</body>
+</html>

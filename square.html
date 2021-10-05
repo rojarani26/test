@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9</title>
+</head>
+<body>
+    <script>
+        function square()
+        {
+            var n=document.getElementById('number').value;
+             document.getElementById('result').innerHTML=(n*n);
+        }
+        function cube()
+        {
+            var n=document.getElementById('number').value;
+             document.getElementById('result').innerHTML=(n*n*n);
+        }
+    </script>
+    
+    Enter number:
+    <input type="number" value="" id="number"><br>
+    <input type="submit" value="Square" onclick="return square()">
+    <input type="submit" value="Cube" onclick="return cube()"><br>
+    <b>The result is:</b><br>
+    <span id="result"></span>
+    
+    
+    
+</body>
+</html>
